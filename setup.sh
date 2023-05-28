@@ -4,7 +4,7 @@ relink() {
         src=$(readlink -f $f)
         dest=~/$(basename $f)
         echo Linking $dest to $src
-        [ -f $dest ] && unlink $dest
+        rm -f "$dest"
         ln -s "$src" "$dest"
     done
 
