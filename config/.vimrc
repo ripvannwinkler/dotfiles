@@ -3,7 +3,7 @@
 " ---------------------------------------------------------------------
 
 " Ensure special directories
-silent !mkdir ~/.vim/{backup,swap,undo} > /dev/null 2>&1
+silent !mkdir -p ~/.vim/{backup,swap,undo} > /dev/null 2>&1
 
 set backupdir=~/.vim/backup//                    " Keep all backups here
 set directory=~/.vim/swap//                      " Keep all swap files here
