@@ -1,12 +1,13 @@
-#files=$(find "$PWD/config" -type f)
+relink(){
 
-for d in config config/linux; do
-
-    for f in $(find "$PWD/$d" -maxdepth 1 -type f); do
+    for f in $(find "$1" -maxdepth 1 -type f); do
         dest=~/$(basename $f)
         echo Linking $dest to $f
         [ -f $dest ] && unlink $dest
         ln -s $f $dest
     done
 
-done
+}
+
+relink "$(dirname $0)/config"
+relink "$(dirname $0)/config/linux"
