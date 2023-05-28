@@ -5,6 +5,7 @@ relink(){
         echo Linking $dest to $f
         [ -f $dest ] && unlink $dest
         ln -s $f $dest
+        source $dest
     done
 
 }
