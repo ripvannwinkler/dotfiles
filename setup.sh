@@ -11,5 +11,4 @@ relink() {
 }
 
 relink "$(dirname $0)/config"
-relink "$(dirname $0)/config/linux"
 exec $SHELL
