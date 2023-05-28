@@ -16,7 +16,6 @@
 [gpg]
     program = /usr/bin/gpg
 [core]
-	editor = code --wait
 	autocrlf = true
 [diff]
     tool = vscode
