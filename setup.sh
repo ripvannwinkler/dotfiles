@@ -1,8 +1,12 @@
-files=$(find "$PWD/config" -type f)
+#files=$(find "$PWD/config" -type f)
 
-for f in $files; do 
-	dest=~/$(basename $f)
-    echo Linking $dest to $f
-	[ -f $dest ] && unlink $dest
-	ln -s $f $dest
+for d in config config/linux; do
+
+    for f in $(find "$PWD/$d" -maxdepth 1 -type f); do
+        dest=~/$(basename $f)
+        echo Linking $dest to $f
+        [ -f $dest ] && unlink $dest
+        ln -s $f $dest
+    done
+
 done

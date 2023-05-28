@@ -1,0 +1,36 @@
+[alias]
+    st = status
+    cmm = commit -m
+    aa = add .
+    co = checkout
+    cob = checkout -b
+    lg = log --graph --pretty=format:'%Cred%h %C(reset)%s %C(green)(%cd)' --abbrev-commit -5
+    lgn = "lg --name-only"
+    bra = branch
+	cma = "!git add -A && git commit -m"
+	cp = cherry-pick
+	ap = add -p
+[user]
+    email = chris@elserinteractive.com
+    name = Chris Vann
+    signingkey = 1CB2AB173195F70A
+[gpg]
+    program = C:\\Program Files (x86)\\GnuPG\\bin\\gpg.exe
+[core]
+	editor = code --wait
+	autocrlf = true
+[diff]
+    tool = vscode
+[difftool "vscode"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+[merge]
+    tool = vscode
+[mergetool "vscode"]
+    cmd = code --wait $MERGED
+[push]
+	followTags = true
+[commit]
+    gpgsign = true
+[log]
+	date = human
+
