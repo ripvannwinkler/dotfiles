@@ -15,8 +15,6 @@
     name = Chris Vann
 [gpg]
     program = /usr/bin/gpg
-[core]
-	autocrlf = true
 [diff]
     tool = vimdiff
 [merge]

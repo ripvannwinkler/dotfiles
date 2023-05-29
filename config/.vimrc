@@ -1,9 +1,31 @@
 " ---------------------------------------------------------------------
-" General settings
+" Plugin variables
 " ---------------------------------------------------------------------
+let NERDTreeShowHidden=1                         " Show dotfiles in NERDTree
+let g:NERDTreeWinSize=36                         " Set the width of the NERDTree window
 
-" Ensure special directories
+" Ensure .vim/ dirs
 silent !mkdir -p ~/.vim/{backup,swap,undo} > /dev/null 2>&1
+
+" Install vim-plug
+if empty(glob('.vim/autoload/plug.vim'))
+  silent !curl -fLo .vim/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+endif
+
+" Specify plugins
+call plug#begin()
+Plug 'https://github.com/danilo-augusto/vim-afterglow.git'
+Plug 'https://github.com/catppuccin/vim.git', { 'as': 'catppuccin' }
+Plug 'https://github.com/preservim/nerdtree.git'
+call plug#end()
+
+" Auto install plugins on load
+autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+autocmd VimEnter * q
+autocmd VimEnter * colorscheme catppuccin_latte
+autocmd VimEnter * NERDTree | wincmd p
+
+syntax on                                        " Enable syntax highlighting
 
 set backupdir=~/.vim/backup//                    " Keep all backups here
 set directory=~/.vim/swap//                      " Keep all swap files here
@@ -21,8 +43,6 @@ set undolevels=1000                              " Allow N undo levels
 set wildmenu                                     " Turn on tab completion
 set wildmode=list:longest,list:full              " Configure tab completion
 
-colorscheme elflord                              " Set color scheme
-syntax on                                        " Enable syntax highlighting
 
 " ---------------------------------------------------------------------
 " Cursor settings
@@ -30,7 +50,7 @@ syntax on                                        " Enable syntax highlighting
 
 set cursorline
 hi CursorLineNr cterm=NONE
-hi CursorLine cterm=NONE ctermbg=24 ctermfg=255
+hi CursorLine cterm=bold ctermbg=237
 
 " ---------------------------------------------------------------------
 " Basic text settings
@@ -94,11 +114,15 @@ filetype plugin indent on
 " l: insert, command-line, regexp-search, etc.
 
 nnoremap <leader>erc :e! ~/.vimrc<cr>            " Edit .vimrc with \erc
+nnoremap <leader>n :NERDTreeFocus<CR>            " Focus NERDTree
 nmap <leader>rrc :so $MYVIMRC<CR>                " Reload .vimrc with \rrc
+
 vmap Q gq                                        " Enable shift+q to rewrap selection in visual mode
 nmap Q gqap                                      " Enable shift+q to rewrap paragraph in normal mode
-map <leader>bd :bd!<cr>                          " Close the current buffer with \bd
-map <leader>ba :1,300 bd!<cr>                    " Close all buffers with \ba
+
+nnoremap <C-q><C-q> :qa<CR>                      " Close all with Ctrl+qq
+nnoremap <C-n> :NERDTreeToggle<CR>               " Toggle NERDTree
+nnoremap <C-f> :NERDTreeFind<CR>                 " Find in NERDTree
 
 " ---------------------------------------------------------------------
 " Auto commands
@@ -107,6 +131,3 @@ map <leader>ba :1,300 bd!<cr>                    " Close all buffers with \ba
 " Python specific settings
 autocmd FileType python set autoindent smartindent et sts=4
   \ cinwords=class,def,elif,else,except,finally,for,if,try,while
-
-
-
