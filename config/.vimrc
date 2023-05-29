@@ -19,7 +19,7 @@ set bs=indent,eol,start                          " Allow backspacing over everyt
 set history=1000                                 " Keep N lines of command line history
 set undolevels=1000                              " Allow N undo levels
 set wildmenu                                     " Turn on tab completion
-set wildmode=longest:full,full                   " Configure tab completion
+set wildmode=list:longest,list:full              " Configure tab completion
 
 colorscheme elflord                              " Set color scheme
 syntax on                                        " Enable syntax highlighting
