@@ -9,6 +9,9 @@ set backupdir=~/.vim/backup//                    " Keep all backups here
 set directory=~/.vim/swap//                      " Keep all swap files here
 set undodir=~/.vim/undo//                        " Keep all undo files here
 
+set list
+set listchars=eol:$,nbsp:_,tab:>-,trail:~,extends:>,precedes:<
+
 set nocompatible                                 " Set Vim rather than Vi settings; must go first
 set noeb                                         " Set no audio or visual error beep
 set bs=2                                         " Allow backspacing over everything in insert mode (compat)
