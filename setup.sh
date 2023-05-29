@@ -31,7 +31,6 @@ while getopts "f" opt; do
     case "$opt" in
     f) 
         overwrite=1
-        echo "Overwriting existing files"
         ;;
     esac
 done
