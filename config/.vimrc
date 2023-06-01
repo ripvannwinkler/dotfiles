@@ -22,7 +22,6 @@ call plug#end()
 
 " Auto configure plugins on load
 autocmd VimEnter * colorscheme catppuccin_latte
-autocmd VimEnter * NERDTree | wincmd p
 
 syntax on                                        " Enable syntax highlighting
 
