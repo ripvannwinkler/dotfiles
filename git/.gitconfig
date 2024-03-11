@@ -1,6 +1,6 @@
 [user]
-	email = chris@vann.pro
-	name = Chris Vann
+  email = chris@vann.pro
+  name = Chris Vann
 
 [alias]
   st = status
@@ -11,5 +11,5 @@
   aa = add .
   lg = log --graph --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset %C(yellow)%d' --abbrev-commit -10
   cmm = commit -m
-	cman = commit --amend --no-edit
-	ptf = push --tags -f
+  cman = commit --amend --no-edit
+  ptf = push --tags -f
