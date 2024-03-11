@@ -38,6 +38,7 @@ colorscheme habamax " set color scheme
 " general 
 set modelines=0 " do not set options from src file
 set number " enable line numbers
+set relativenumber "enable relative line numbers
 set ruler " enable file stats
 set encoding=utf-8 " default char encoding
 
@@ -52,6 +53,7 @@ set noexpandtab
 set noshiftround
 
 " cursor
+set cursorline "highlight cursor line
 set scrolloff=5 " keep this many lines above and below the current line
 set backspace=indent,eol,start " allow backspace over indents, eol and starting pos
 
