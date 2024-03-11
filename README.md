@@ -9,6 +9,6 @@ machines. This repository is an encapsulation of those settings.
 To install these files to any new machine, perform the following steps:
 
 ```shell
-git clone <dotfilesrepo> ~/.dotfiles
+git clone https://github.com/ripvannwinkler/dotfiles ~/.dotfiles
 bash ~/.dotfiles/init.sh
 ```
