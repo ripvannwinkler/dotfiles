@@ -3,9 +3,9 @@ DOTFILES=$(dirname "$DOTFILES")
 
 echo "Using dotfiles from $DOTFILES"
 
-ln -s "$DOTFILES/bash/.bash_aliases" ~/.bash_aliases
-ln -s "$DOTFILES/git/.gitconfig" ~/.gitconfig
-ln -s "$DOTFILES/vim/.vimrc" ~/.vimrc
-ln -s "$DOTFILES/vim/" ~/.vim
+ln -ns "$DOTFILES/bash/.bash_aliases" ~/.bash_aliases
+ln -ns "$DOTFILES/git/.gitconfig" ~/.gitconfig
+ln -ns "$DOTFILES/vim" ~/.vim
+ln -ns "$DOTFILES/vim/.vimrc" ~/.vimrc
 
 echo "Dotfiles installed to $(realpath ~/)"
