@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 DOTFILES=$(realpath "$0")
 DOTFILES=$(dirname "$DOTFILES")
 
