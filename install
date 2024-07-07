@@ -4,6 +4,6 @@ shopt -s dotglob
 targets=$(realpath ~/dotfiles/files/*)
 
 echo "Adding symlinks..."
-ln -sf $targets $HOME
+ln -vsf $targets $HOME
 
 echo "Done."
