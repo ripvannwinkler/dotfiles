@@ -15,5 +15,3 @@ fi
 
 echo "Installing dotfiles..."
 bash ~/dotfiles/install
-
-echo "Done."
