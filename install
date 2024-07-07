@@ -5,5 +5,3 @@ targets=$(realpath ~/dotfiles/files/*)
 
 echo "Adding symlinks..."
 ln -vsf $targets $HOME
-
-echo "Done."
