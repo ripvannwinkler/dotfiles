@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+shopt -s dotglob
+targets=$(realpath ./files/*)
+ln -sf $targets $HOME

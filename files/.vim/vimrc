@@ -1,51 +1,56 @@
 set nocompatible
 filetype off
 
-" initialize vundle
+" begin plugins 
 set rtp+=~/.vim/bundle/Vundle.vim
-
-" begin plugins
 call vundle#begin()
 
-" this line is required
-Plugin 'VundleVim/Vundle.vim'
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
+" ---------------------------------------------------------------------
+" See example plugin commands below.
+" ---------------------------------------------------------------------
+"
+" # plugin on GitHub repo
 " Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
+
+" # plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
-" Git plugin not hosted on GitHub
+
+" # Git plugin not hosted on GitHub
 " Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
+
+" # git repos on your local machine (i.e. when working on your own plugin)
 " Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
+" 
+" # The sparkup vim script is in a subdirectory of this repo called vim.
+" # Pass the path to set the runtimepath properly.
 " Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Install L9 and avoid a Naming conflict if you've already installed a
-" different version somewhere else.
+"
+" # Install L9 and avoid a Naming conflict if you've already installed a
+" # different version somewhere else.
 " Plugin 'ascenator/L9', {'name': 'newL9'}
+
+Plugin 'VundleVim/Vundle.vim' " always load first
 
 call vundle#end()
 " end plugins
 
+" basics
 syntax on
 filetype plugin indent on
 let mapleader='\' " remap leader key
 colorscheme habamax " set color scheme
 
 " general 
-set modelines=0 " do not set options from src file
+set ruler " enable file stats
 set number " enable line numbers
 set relativenumber "enable relative line numbers
-set ruler " enable file stats
-set encoding=utf-8 " default char encoding
+set encoding=utf-8 " set the default file encoding
+set modelines=0 " do not set options from src file
 
 " whitespace
 set wrap
-set textwidth=79
-set formatoptions=tcqrn1
+set textwidth=80
+set formatoptions=pjtcqrn1
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
