@@ -1,4 +1,8 @@
-# Installation
+# My Dotfiles
+
+A repo for my own personal dotfiles. Use at your own discretion.
+
+## Installation
 
 To install locally:
 
