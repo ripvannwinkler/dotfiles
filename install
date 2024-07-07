@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
 shopt -s dotglob
-targets=$(realpath ./files/*)
+targets=$(realpath ~/dotfiles/files/*)
 ln -sf $targets $HOME
