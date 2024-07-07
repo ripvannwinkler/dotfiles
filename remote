@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+set -eo pipefail
+
+git clone https://github.com/ripvannwinkler/dotfiles.git ~/dotfiles
+bash ~/dotfiles/install
