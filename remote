@@ -3,11 +3,17 @@
 set -eo pipefail
 
 if ! test -d ~/dotfiles; then
+	echo "~/dotfiles does not exist; cloning repo..."
 	git clone https://github.com/ripvannwinkler/dotfiles.git ~/dotfiles
+
 else
 	pushd ~/dotfiles
+	echo "~/dotfiles exists; fetching latest..."
 	git pull --rebase
 	popd
 fi
 
+echo "Installing dotfiles..."
 bash ~/dotfiles/install
+
+echo "Done."
