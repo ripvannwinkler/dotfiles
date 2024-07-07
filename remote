@@ -7,10 +7,10 @@ if ! test -d ~/dotfiles; then
 	git clone https://github.com/ripvannwinkler/dotfiles.git ~/dotfiles
 
 else
-	pushd ~/dotfiles > /dev/null
+	pushd ~/dotfiles
 	echo "~/dotfiles exists; fetching latest..."
 	git pull
-	popd  > /dev/null
+	popd
 fi
 
 echo "Installing dotfiles..."
