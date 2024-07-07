@@ -11,7 +11,7 @@ ln -vsf $targets $HOME
 if test -f ~/.bash_aliases; then
   if ! grep -q 'source ~/.bash_aliases' ~/.bashrc; then
     echo 'Installing bash aliases'
-    echo "\n# custom aliases" >> /.bashrc
+    echo "\n\# custom aliases" >> /.bashrc
     echo "source ~/.bash_aliases" >> ~/.bashrc
   fi
 fi
