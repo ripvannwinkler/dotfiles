@@ -9,7 +9,7 @@ if ! test -d ~/dotfiles; then
 else
 	pushd ~/dotfiles > /dev/null
 	echo "~/dotfiles exists; fetching latest..."
-	git pull --rebase
+	git pull
 	popd  > /dev/null
 fi
 
