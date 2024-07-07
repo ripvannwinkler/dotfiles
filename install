@@ -8,7 +8,7 @@ echo 'Adding symlinks...'
 ln -vsf $targets $HOME
 
 # install bash aliases
-if test -f ~/.bash_alises; then
+if test -f ~/.bash_aliases; then
   if ! grep -q 'source ~/.bash_aliases' ~/.bashrc; then
     echo 'Installing bash aliases'
     echo 'source ~/.bash_alises' >> ~/.bashrc
