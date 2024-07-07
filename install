@@ -3,5 +3,14 @@
 shopt -s dotglob
 targets=$(realpath ~/dotfiles/files/*)
 
-echo "Adding symlinks..."
+# install symlinks
+echo 'Adding symlinks...'
 ln -vsf $targets $HOME
+
+# install bash aliases
+if test -f ~/.bash_alises; then
+  if ! grep -q 'source ~/.bash_aliases' ~/.bashrc; then
+    echo 'Installing bash aliases'
+    echo 'source ~/.bash_alises' >> ~/.bashrc
+  fi
+fi
