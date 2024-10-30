@@ -47,7 +47,7 @@ set relativenumber "enable relative line numbers
 set encoding=utf-8 " set the default file encoding
 set modelines=0 " do not set options from src file
 
-" whitespace
+" configure tabs / whitespace
 set wrap
 set textwidth=80
 set formatoptions=pjtcqrn1
@@ -55,16 +55,6 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=0
 set noexpandtab
-
-" whitespace chars
-" \u21A6 is ⇥
-" \u1F862 is 🡢
-" set whitespace char symbols
-set listchars=tab:🡢\ ,trail:·,extends:>,precedes:<,space:·
-" set the whitespace symbol color
-:hi SpecialKey ctermfg=darkgray guifg=gray70
-" enable whitespace chars
-set list
 
 " cursor
 set cursorline "highlight cursor line
@@ -103,7 +93,8 @@ set smartcase
 set showmatch
 
 " visualize whitespace
-set listchars=tab:▸\ ,eol:¬
+set listchars=tab:▸\ ,trail:·,space:·
+:hi SpecialKey ctermfg=darkgray guifg=gray70
 map <leader>l :set list!<CR> " Toggle tabs and EOL
 
 " macros
