@@ -38,7 +38,7 @@ call vundle#end()
 syntax on
 filetype plugin indent on
 let mapleader='\' " remap leader key
-colorscheme habamax " set color scheme
+colorscheme koehler " set color scheme
 
 " general 
 set ruler " enable file stats
