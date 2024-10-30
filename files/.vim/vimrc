@@ -64,6 +64,8 @@ set noshiftround
 set listchars=tab:🡢\ ,trail:·,extends:>,precedes:<,space:·
 " set the whitespace symbol color
 :hi SpecialKey ctermfg=darkgray guifg=gray70
+" enable whitespace chars
+set list
 
 " cursor
 set cursorline "highlight cursor line
