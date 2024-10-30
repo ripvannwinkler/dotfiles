@@ -93,7 +93,7 @@ set smartcase
 set showmatch
 
 " visualize whitespace
-set listchars=tab:▸\ ,trail:·,space:·
+set list lcs=trail:·,tab:▸\ 
 :hi SpecialKey ctermfg=darkgray guifg=gray70
 map <leader>l :set list!<CR> " Toggle tabs and EOL
 
