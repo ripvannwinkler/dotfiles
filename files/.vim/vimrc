@@ -94,7 +94,6 @@ set showmatch
 
 " visualize whitespace
 set list lcs=trail:·,tab:▸\ 
-:hi SpecialKey ctermfg=238
 map <leader>l :set list!<CR> " Toggle tabs and EOL
 
 " macros
