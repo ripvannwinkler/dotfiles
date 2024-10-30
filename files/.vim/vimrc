@@ -57,6 +57,14 @@ set softtabstop=2
 set noexpandtab
 set noshiftround
 
+" whitespace chars
+" \u21A6 is ⇥
+" \u1F862 is 🡢
+" set whitespace char symbols
+set listchars=tab:🡢\ ,trail:·,extends:>,precedes:<,space:·
+" set the whitespace symbol color
+:hi SpecialKey ctermfg=darkgray guifg=gray70
+
 " cursor
 set cursorline "highlight cursor line
 set scrolloff=5 " keep this many lines above and below the current line
