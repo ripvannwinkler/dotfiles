@@ -49,8 +49,8 @@ set modelines=0 " do not set options from src file
 
 " configure tabs / whitespace
 set wrap
-set textwidth=80
-set formatoptions=pjtcqrn1
+set textwidth=0
+set formatoptions=pjtqn1
 set tabstop=4
 set shiftwidth=4
 set softtabstop=0
@@ -93,7 +93,7 @@ set smartcase
 set showmatch
 
 " visualize whitespace
-set list lcs=trail:·,tab:▸\ 
+set nolist lcs=trail:·,tab:▸\ 
 map <leader>l :set list!<CR> " Toggle tabs and EOL
 
 " macros
